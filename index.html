@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detection Tools</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script
+      src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js"
+      defer
+      init
+    ></script>
+    <style>
+      @keyframes flash {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .flash-text {
+        animation: flash 1s infinite;
+      }
+
+      .mt-4 {
+        margin-top: 1.5rem;
+      }
+
+      .text-muted-foreground {
+        color: #6c757d;
+      }
+
+      .button {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        background-color: #0051ff;
+        border-radius: 5px;
+        display: inline-block;
+      }
+
+      .button:hover {
+        transform: scale(1.2);
+      }
+
+      .text {
+        list-style-type: none;
+        margin: 10px;
+      }
+
+      .bg-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .bg-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      .max-w-7xl {
+        max-width: 84rem;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .sm\\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .lg\\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-3xl {
+        font-size: 1.875rem;
+      }
+
+      .font-extrabold {
+        font-weight: 800;
+      }
+
+      .mt-12 {
+        margin-top: 3rem;
+      }
+
+      .grid {
+        display: grid;
+      }
+
+      .gap-8 {
+        gap: 2rem;
+      }
+
+      .lg\\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+
+      .shadow-lg {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1rem * var(--tw-space-x-reverse));
+        margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+      }
+
+      .banner-text {
+        display: inline-block;
+        font-size: 1.875rem;
+        font-weight: 800;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        header{
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        .banner-text {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top_container">
+      <div class="logo">
+        <img src="Preview (1).png" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li class="text">
+            <a href="#tools" class="button outline">Tools</a>
+          </li>
+          <li class="text">
+            <a href="signup.html" target="_blank" class="button outline"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="user-actions">
+        <a href="login.html" class="text" target="_blank">Log In</a>
+      </div>
+    </header>
+    <div class="moving-banner">
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      <span>Detectify </span>
+      
+    </div>
+    <main>
+      <section class="hero">
+        <div class="banner text-center">
+          <span class="banner-text" id="banner-find"
+            ><b><i>Find</i></b></span
+          >
+          <span class="banner-text" id="banner-match"
+            ><b><i>Match</i></b></span
+          >
+          <span class="banner-text" id="banner-delete"
+            ><b><i>Delete</i></b></span
+          >
+        </div>
+        <!-- <h1><b><i>Detectify</i></b> detect duplicate easily.</h1> -->
+         <h1><b><i><span style="color: blue;">Detectify</span></i></b> detect duplicate easily.</h1>
+
+        <p>
+          All the tools you’ll need to be more productive and work smarter with
+          documents.
+        </p>
+        <div class="hero-buttons">
+          <a href="#tools" class="button outline"
+            >Explore All Detection Tools</a
+          >
+        </div>
+      </section>
+    </main>
+    <div class="bg-background text-foreground py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold" id="tools">
+            Most Popular Detection Tools
+          </h2>
+          <p class="mt-4 text-muted-foreground flash-text">
+            Tools to detect and check % of similarity of file for free. Try it
+            out!
+          </p>
+        </div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <div class="bg-card p-6 rounded-lg shadow-lg" style="cursor: pointer">
+            <div class="flex items-center space-x-4">
+              <span class="material-symbols-outlined"> picture_as_pdf </span>
+              <div>
+                <a href="directory1.html">
+                  <h3 class="text-lg font-semibold">PDF & PDF</h3>
+                  <p class="text-sm text-muted-foreground">
+                    Detect duplicacy between two Pdfs.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-card p-6 rounded-lg shadow-lg" style="cursor: pointer">
+            <div class="flex items-center space-x-4">
+              <span class="material-symbols-outlined"> description </span>
+              <div>
+                <a href="directory2.html">
+                  <h3 class="text-lg font-semibold">Docs & Docs</h3>
+                  <p class="text-sm text-muted-foreground">
+                    Detect duplicacy between two Documents.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-card p-6 rounded-lg shadow-lg" style="cursor: pointer">
+            <div class="flex items-center space-x-4">
+              <span class="material-symbols-outlined"> menu_book </span>
+              <div>
+                <a href="directory3.html">
+                  <h3 class="text-lg font-semibold" style="margin-right: 20%">
+                    Text & Text
+                  </h3>
+                  <p class="text-sm text-muted-foreground">
+                    Detect duplicacy between two Text files.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-card p-6 rounded-lg shadow-lg" style="cursor: pointer">
+            <div class="flex items-center space-x-4">
+              <span class="material-symbols-outlined"> picture_as_pdf </span>
+              <div>
+                <a href="directory4.html">
+                  <h3 class="text-lg font-semibold">Any file</h3>
+                  <p class="text-sm text-muted-foreground">
+                    Detect duplicacy between two files with any extension.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-card p-6 rounded-lg shadow-lg" style="cursor: pointer">
+            <div class="flex items-center space-x-4">
+              <span class="material-symbols-outlined"> equal </span>
+              <div>
+                <a href="directory5.html">
+                  <h3 class="text-lg font-semibold">% of similarity</h3>
+                  <p class="text-sm text-muted-foreground">
+                    Calculate the % of Similarity between two files.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p style="text-align: center">&copy; 2024 PDF Tools</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const texts = ["banner-find", "banner-match", "banner-delete"];
+        let index = 0;
+
+        function showNextText() {
+          if (index > 0) {
+            document.getElementById(
+              texts[(index - 1) % texts.length]
+            ).style.opacity = 0;
+          }
+          document.getElementById(
+            texts[index % texts.length]
+          ).style.opacity = 1;
+          index++;
+          setTimeout(showNextText, 1000);
+        }
+        showNextText();
+      });
+    </script>
+  </body>
+</html>

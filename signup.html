@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .button {
+          font-family: 'Arial', sans-serif;
+          text-align: center;
+          color: #fff;
+          padding: 10px 20px;
+          text-decoration: none;
+          transition: transform 0.3s ease; /* Smooth transition */
+          background-color: #007BFF; /* Button background color */
+          border-radius: 5px; /* Rounded corners */
+          display: inline-block;
+      }
+
+      .button:hover {
+          transform: scale(1.2); /* Grow by 20% on hover */
+      }
+
+      .text {
+          list-style-type: none;
+          margin: 10px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60px); /* Adjust based on header/footer height */
+        background-color: #f9f9f9; /* Background color for the page */
+      }
+      .form-container {
+        background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Thin border line */
+        border-radius: 10px; /* Rounded corners */
+        padding: 20px;
+        width: 100%;
+        max-width: 400px; /* Maximum width for the form */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+      }
+
+      .form-container h2 {
+        margin-top: 0;
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-container input {
+        width: calc(100% - 20px); /* Full width minus padding */
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .form-container button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #007BFF;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .form-container p {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .form-container a {
+        color: #007BFF;
+        text-decoration: none;
+      }
+
+      .form-container a:hover {
+        text-decoration: underline;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <img src="Preview (1).png" alt="Logo">
+          <!-- <span class="text"><b><i>Find, Match, Delete</i></b></span> -->
+<br>
+
+          <!-- <span class="text">"Find, Match, Delete"</span> -->
+        </div>
+        <nav>
+          <ul>
+            <li class="text"><a href="index.html#tools" class="button">Tools</a></li>
+        <!-- <li class="text"><a href="#findsimilarity" class="button">Find Similarity</a></li> -->
+            <!-- <li class="text"><a href="index.html#tools" class="button" style="color: #fff">Tools</a></li> -->
+            <!-- <li class="text"><a href="#check">Check</a></li> -->
+            <!-- <li class="text"><a href="#convert">Convert</a></li> -->
+            <!-- <li class="text"><a href="#merge">Merge</a></li> -->
+            <!-- <li class="text"><a href="#findsimilarity" class="button" style="color: #fff">Find Similarity</a></li> -->
+            <!-- <li class="text"><a href="signup.html">Sign </a></li> -->
+            <!-- <li class="text"><a href="#ai-pdf">AI PDF</a></li> -->
+          </ul>
+        </nav>
+        <!-- <div class="user-actions">
+          <a href="#pricing" class="text">Pricing</a>
+          <a href="#teams" class="text">Teams</a>
+          <a href="login.html" class="text">Log In</a>
+          <a href="#free-trial" class="button" style="color: #fff"
+            >Free Trial</a
+          >
+        </div> -->
+      </header>
+      <div class="container">
+        <div class="form-container">
+          <h2>Sign Up</h2>
+          <form>
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="username" required />
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required />
+            <label for="signup-password">Password:</label>
+            <input
+              type="password"
+              id="signup-password"
+              name="password"
+              required
+            />
+            <button type="submit" class="button">Sign Up</button>
+            <p>
+              Already have an account?
+              <a href="login.html" class="text">Login here</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

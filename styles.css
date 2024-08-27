@@ -1,0 +1,357 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #ade2e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-container input {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 0.75rem;
+    background-color: #0051ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.form-container button:hover {
+    background-color: #0051ff;
+}
+
+.form-container p {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.top_container{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+/* Navigation */
+nav {
+    flex-grow: 1; /* Allow nav to take available space */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+nav ul li {
+    margin: 0 1rem; /* Space between items */
+}
+
+.text {
+    transition: text-shadow 0.3s; /* Optional, for a smooth transition */
+}
+
+.text:hover {
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Adjust the values to your liking */
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    margin-left: 1rem; /* Space between action items */
+}
+
+.button {
+    background-color: #0051ff; /* Change this as per your design */
+    padding: 0.5rem 1rem; /* Add padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+}
+
+
+.banner-container {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    overflow: hidden; /* Hide overflow to ensure smooth scrolling */
+    top: 60px; /* Adjust this value to position the banner correctly */
+  }
+  .moving-banner {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+    font-size: 2rem; /* Adjust font size as needed */
+    color: blue; /* Set text color to blue */
+    font-style: italic; /* Make the text italic */
+    animation: scroll 30s linear infinite; /* Ensure the animation starts immediately */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start from right outside the viewport */
+    }
+    100% {
+      transform: translateX(-100%); /* End from left outside the viewport */
+    }
+  }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav {
+        width: 100%; /* Make the nav take full width */
+    }
+
+    .user-actions {
+        margin-top: 1rem; /* Add space above user actions */
+        width: 100%; /* Make the user actions take full width */
+        justify-content: flex-start; /* Align items to the start */
+    }
+}
+
+  
+.button:hover {
+    background-color: #5fb7ea;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 1rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    background-color: #0051ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#searchInput {
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button.outline {
+    background-color: transparent;
+    border: 1px solid #0051ff;
+    color: #0051ff;
+}
+
+.box:hover {
+    background-color: #838181;
+}
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #f0f8ff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.features {
+    text-align: center;
+    padding: 2rem;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.features p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tool-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tool-card img {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 5.9% 10%;
+        --radius: 0.5rem;
+    }
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+    }
+}

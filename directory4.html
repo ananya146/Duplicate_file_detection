@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Detection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        text-align: center;
+        margin-top: 5%;
+      }
+      .input-field,
+      .button {
+        display: block;
+        margin: 0 auto;
+      }
+      .input-field {
+        height: 30px;
+        width: 50%;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+      .button {
+        background-color: #0051ff;
+        color: aliceblue;
+        height: 40px;
+        width: 50%;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: medium;
+        border: none;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: #5fb7ea;
+        transform: scale(1.05);
+      }
+      h1 {
+        color: black;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        white-space: pre-wrap;
+        font-family: "Courier New", Courier, monospace;
+        box-shadow: 0 4px 8px #292b30;
+        color: #333;
+        border: 2px solid #0051ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="Preview (1).png" alt="Logo" />
+        </div>
+        <br />
+      </header>
+      <input
+        class="input-field"
+        type="text"
+        id="directory"
+        placeholder="Enter Directory"
+      />
+      <button class="button" id="buttonpdf" onclick="findDuplicates('pdf')">
+        Find Any Duplicates 
+      </button>
+      <button
+        class="button"
+        id="deleteDuplicates"
+        style="display: none"
+        onclick="deleteDuplicates()"
+      >
+        Delete Duplicates
+      </button>
+
+      <div id="output"></div>
+    </div>
+    <script>
+      function findDuplicates(type) {
+        const directory = document.getElementById("directory").value;
+
+        if (!directory) {
+          displayOutput("Please enter a directory");
+          return;
+        }
+
+        let url = "http://127.0.0.1:5000/find-any-duplicates";
+
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ directory }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.duplicates && data.duplicates.length > 0) {
+              duplicates = data.duplicates;
+              let duplicatesList = "Duplicates found:\n";
+              data.duplicates.forEach((pair) => {
+                duplicatesList += `File 1: ${pair[0]}\nFile 2: ${pair[1]}\n\n`;
+              });
+              displayOutput(duplicatesList);
+              document.getElementById("deleteDuplicates").style.display =
+                "block";
+            } else {
+              displayOutput("No duplicates found.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            displayOutput("An error occurred. Check the console for details.");
+          });
+      }
+
+      function deleteDuplicates() {
+        if (duplicates.length === 0) {
+          displayOutput("No duplicates to delete.");
+          return;
+        }
+        fetch("http://127.0.0.1:5000/delete-duplicates", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ duplicates }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            displayOutput(data.message);
+            document.getElementById("deleteDuplicates").style.display = "none";
+            duplicates = [];
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            displayOutput("An error occurred. Check the console for details.");
+          });
+      }
+
+      function displayOutput(message) {
+        document.getElementById("output").textContent = message;
+      }
+    </script>
+  </body>
+</html>
